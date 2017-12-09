@@ -4,7 +4,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 echo 'Unit Test...'
-                python -m pytest tests -vv
+                sh "python -m pytest tests -vv"
             }
         }
         stage('Deploy') {
