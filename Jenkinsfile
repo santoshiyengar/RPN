@@ -4,7 +4,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 echo 'Unit Test...'
-                sh "python -m /home/sly/.local/bin/pytest tests -vv"
+                python rpn_main.py
             }
         }
         stage('Deploy') {
