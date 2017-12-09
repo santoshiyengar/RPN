@@ -4,7 +4,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 echo 'Unit Test...'
-                sh "/usr/bin/python2.7 /usr/lib/pycharm-community/helpers/pycharm/pytestrunner.py -p pytest_teamcity /home/sly/Repositories/RPN/tests"
+                sh "python -m /home/sly/.local/bin/pytest tests -vv"
             }
         }
         stage('Deploy') {
