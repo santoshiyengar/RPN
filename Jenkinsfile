@@ -4,7 +4,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 echo 'Unit Test...'
-                python rpn_main.py
+                python rpn.py
             }
         }
         stage('Deploy') {
