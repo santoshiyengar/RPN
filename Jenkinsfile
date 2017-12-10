@@ -4,6 +4,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 echo 'Unit Test...'
+                ls -ltr
             }
         }
         stage('Deploy') {
@@ -13,7 +14,7 @@ pipeline {
         }
         stage('Done') {
             steps {
-                echo 'Done '
+                echo 'Done....'
             }
         }
     }
