@@ -13,5 +13,3 @@ node {
    stage('Results') {
    }
 }
-
-{AQAAABAAAAAQ0R7UMLgB+qoShpoM8HSrN11P2/W8xplAL/DRJwX64G0=}
