@@ -10,7 +10,6 @@ node {
    }
    stage('Test') {
    }
-        
    stage('Results') {
    }
 }
