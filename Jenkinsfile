@@ -12,5 +12,4 @@ node {
    }
    stage('Results') {
    }
-    
 }
