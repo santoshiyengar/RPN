@@ -1,15 +1,11 @@
-script {  properties([
-    pipelineTriggers([
-      [$class: "GitHubPushTrigger"]
-    ])
-  ])}
 node {
-   def mvnHome
    stage('Preparation') {
-      git 'https://github.com/santoshiyengar/RPN.git'
+       checkout scm;
    }
    stage('Test') {
+       python 
    }
    stage('Results') {
+       
    }
 }
