@@ -1,15 +1,8 @@
-script {  properties([
-    pipelineTriggers([
-      [$class: "GitHubPushTrigger"]
-    ])
-  ])}
 node {
-   def mvnHome
    stage('Preparation') {
-      git 'https://github.com/santoshiyengar/RPN.git'
+       checkout scm;
    }
    stage('Test') {
-   }
-   stage('Results') {
+       sh '/usr/bin/python2.7 /usr/lib/pycharm-community/helpers/pycharm/pytestrunner.py -p pytest_teamcity /home/sly/Repositories/RPN/tests'
    }
 }
