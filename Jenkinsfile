@@ -6,9 +6,9 @@ node {
    }
    stage('Results') {
       emailext(
-         body: ${BUILD_LOG, maxLines, escapeHtml},
+         body: '${env.BUILD_LOG}',
          attachLog: true,
-         subject: 'env.BUILD_NUMBER',
+         subject: '${env.BUILD_NUMBER}',
          to: 'santoshiyengar@gmail.com'
       )   
    }
