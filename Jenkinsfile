@@ -1,4 +1,5 @@
-node {
+pipeline{
+   node any
    stage('Preparation') {
        checkout scm;
    }
