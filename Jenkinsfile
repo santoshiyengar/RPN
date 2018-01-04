@@ -5,11 +5,15 @@ node {
    stage('Test') {
    }
    stage('Results') {
-      emailext(
-         body: '${env.BUILD_LOG}',
-         attachLog: true,
-         subject: '${env.BUILD_ID}',
-         to: 'santoshiyengar@gmail.com'
-      )   
+   }
+   post{
+      always{
+         emailext(
+            body: '${env.BUILD_LOG}',
+            attachLog: true,
+            subject: '${env.BUILD_ID}',
+            to: 'santoshiyengar@gmail.com'
+         )   
+      }
    }
 }
