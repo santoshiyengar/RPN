@@ -6,8 +6,8 @@ node {
    }
    stage('Results') {
       emailext(
-         body: 'your component is released',
-         attachlog: true,
+         body: ${BUILD_LOG, maxLines, escapeHtml},
+         attachLog: true,
          subject: 'env.BUILD_NUMBER',
          to: 'santoshiyengar@gmail.com'
       )   
