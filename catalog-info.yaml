@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: RPN
+  annotations:
+    github.com/project-slug: santoshiyengar/RPN
+spec:
+  type: other
+  lifecycle: unknown
+  owner: Santosh Iyengar
